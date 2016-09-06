@@ -1,0 +1,16 @@
+Lesson 01 Notes
+
+Today in class I learned how to use the print statement.
+It goes like this:
+
+public class SecondProgram
+
+{
+	public static void main(String[]args)
+	{
+		System.out.println("");	
+	}
+}
+
+This format allows for the print of anything. With this we printed out ascii art in which we coppied every single 
+line in order to create a picture.
