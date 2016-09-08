@@ -1,0 +1,17 @@
+Lesson_03 Notes
+
+Today I learned how to use different commands to create variables and add them into texts. 
+You need to start with 
+
+import java.util.Scanner; 
+
+and then you must create a new scanner 
+
+Scanner keyboard = new Scanner(System.in);
+
+and then a string with variable such as
+
+String name = keyboard.next();
+
+After tinkering with these new codes I created a BMI calclater and used float for that.
+I then finished off with created a conversion between dollars to euoroes with some double statements.
