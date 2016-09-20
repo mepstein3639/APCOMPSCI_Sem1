@@ -1,0 +1,33 @@
+Lesson_04 Notes
+
+This time around we learned how to call method and objects to print statments 
+from one line. 
+
+This is useful in order to continue running the code and and printing it without
+having to type it out many times.
+
+The basic format is:
+
+import java.util.Scanner;
+
+public class ________
+{
+	public static void main(String[]args)
+	{
+	_________ form = new ________-();
+		
+		Scanner keyboard = new Scanner(System.in);
+	
+	}
+
+	public void format(String word1, String word2)
+	
+	{
+		System.out.printf("* %15s %20s *\n", word1,word2);
+	}
+		
+This format allows for strings and doubles to be printed in a certain formating that
+is also appealing to the user.
+
+It makes it possible to personalize the print staments a little more than before.
+
