@@ -22,6 +22,6 @@ public class Rectangle
 	}
 	public static void print()
 	{
-		System.out.printf("The perimeter is %.5f ft around.\n", perimeter);
+		System.out.printf("The perimeter is %.5f ft around.", perimeter);
 	}
 }

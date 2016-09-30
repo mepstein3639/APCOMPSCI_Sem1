@@ -19,6 +19,6 @@ public class Cube
 	}
 	public static void print()
 	{
-		System.out.printf("The surface area is %.5f .\n", sa);
+		System.out.printf("The surface area is %.5f .", sa);
 	}
 }

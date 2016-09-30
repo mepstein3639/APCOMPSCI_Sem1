@@ -22,7 +22,7 @@ public class Lab_02
 		int wid = 3;
 		int hei = 2;
 		
-		System.out.println(" The surface are is " + 2*(wid * hei + len * hei + len * wid));
+		System.out.println("The surface are is " + 2*(wid * hei + len * hei + len * wid));
 		
 	}
 }

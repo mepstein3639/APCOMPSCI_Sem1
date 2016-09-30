@@ -15,10 +15,10 @@ public class Circle
 	}
 	public static void calcArea()
 	{
-		area = radius * radius * 3.14 * 4;
+		area = radius * radius * 3.14;
 	}
 	public static void print()
 	{
-		System.out.printf("The surface area is %.5f ft around.\n", area);
+		System.out.printf("The area is %.5f.\n", area);
 	}
 }
