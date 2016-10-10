@@ -54,15 +54,11 @@ public class Discount_Receipt
 	public static double dis(double amount)
 	{
 		if(amount > 2000)
-		{
 			return amount * .15;
-		}
 		
 		else
-			
-		{
 			return 0.0;
-		}
+		
 	}
 	
 	public void format(String word, double number)
