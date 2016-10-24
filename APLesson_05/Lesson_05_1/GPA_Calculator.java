@@ -29,23 +29,23 @@ public class GPA_Calculator
 	public static double calcPoints(String grade)
 	
 	{
-		if (grade.equals("A"))
+		if (grade.equals("a"))
 			
 			return 4.0;
 			
-		if (grade.equals("B"))
+		if (grade.equals("b"))
 			
 			return 3.0;
 			
-		if (grade.equals("C"))
+		if (grade.equals("c"))
 			
 			return 2.0;
 			
-		if (grade.equals("D"))
+		if (grade.equals("d"))
 			
 			return 1.0;
 			
-		if (grade.equals("F"))
+		if (grade.equals("f"))
 			
 			return 0.0;
 			

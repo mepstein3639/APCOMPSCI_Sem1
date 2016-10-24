@@ -12,7 +12,7 @@ public class BMIpart2
 		double y = weight / x;
 		double z = y * 703;
 		System.out.println("Your BMI is " + z + ".");
-		double kek = calcCondish(z);
+		double a = calcCondish(z);
 	}
 	
 	public static double calcCondish(double BMI)
@@ -30,7 +30,7 @@ public class BMIpart2
 		else if (BMI <= 35)
 			 System.out.println("You are fat");
 		else
-			 System.out.println("You are absurdly fat");
+			 System.out.println("You're HUGE! -Donald Trump");
 		 
 		 return 0;
 		 
