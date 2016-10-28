@@ -1,32 +1,36 @@
 import java.util.Scanner;
 public class PasswordUsername
 {
-	static Scanner kb;
 	public static void main(String[]args)
 	{
-		kb = new Scanner(System.in);
-		static String password = ht;
-		static String username = f;
-		recursion();
-	}
-	
-	public static void recursion()
-	{
-		System.out.println("Please type in the password");
-		String pass = kb.next();
-		System.out.printLine("Please type in the username");
+		PasswordUsername form = new PasswordUsername();
+		Scanner kb = new Scanner(System.in);
+		
+		System.out.println("Enter the username: ");
 		String user = kb.nextLine();
-		if(user(username) || pass(password))
+		System.out.println("Enter the password: ");
+		String pass = kb.nextLine();
+		String Username = "michael";
+		String Password = "epstein";
+	
+		if (user.equals(Username)|| pass.equals(Password))
 		{
-			if(pass("h"))
-				System.out.print("Lets do some recursions!");
+			if (!user.equals(Username))
+			{
+				System.out.println("Your username is incorrect.");
+			}
+			else if (!pass.equals(Password))
+			{
+				System.out.println("Your password is incorrect.");
+			}
 			else
-				System.out.println("Spoiled the fun!");
+			{
+				System.out.println("Welcome " + user + "!");
+			}
 		}
 		else
 		{
-			System.out.println("Please enter Y or N");
-			recursion();
+			System.out.println("Please Leave. Both are incorrect!");
 		}
 	}
 }

@@ -59,12 +59,12 @@ public class Adventure
 			if(e == 1)
 			{
 				System.out.println("Do you want to destroy....." +
-								"\n 1. Comercial area" +
+								"\n 1. Comemrcial area" +
 								"\n 2. Residential area" );
 				int f = kb.nextInt();
 					if(f == 1)
 					{
-						System.out.println("You are a Super villian who has an array of nukes who destroys comercial buildings." +
+						System.out.println("You are a Super villian who has an array of nukes who destroys commercial buildings." +
 										"\n******** You are a smart villian! ********");
 					}
 					else
@@ -76,21 +76,20 @@ public class Adventure
 			else
 			{
 					System.out.println("Do you want to invade the....." +
-									"\n 1. Comercial area" +
+									"\n 1. Commercial area" +
 									"\n 2. Residential area" );
 					int g = kb.nextInt();
 						if(g == 1)
 					{
-						System.out.println("You are a Super villian who has an army of robots who invades comercial buildings." +
-										"\n++++++++ You are weird and different then othe villians. ++++++++++");
+						System.out.println("You are a Super villian who has an army of robots who invades commercial buildings." +
+										"\n++++++++ You are weird and different then other villians. ++++++++++");
 					}
 					else
 					{
-						System.out.println("You are a Super villian who has an army who robots who invade residential buildings." +
+						System.out.println("You are a Super villian who has an army of robots who invades residential buildings." +
 										"\n******** I like the way you think! ********");
 				}
 			}	
 		}		
 	}
-}
-
+}   
