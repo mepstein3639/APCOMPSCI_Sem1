@@ -7,22 +7,20 @@ public class Intrest
 		Intrest compoundintrest = new Intrest();
 		
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Please enter the intrest rate:");
-		double r = kb.nextDouble();
 		System.out.println("Enter the amount you intend to borrow:");
 		double p = kb.nextDouble();
+		System.out.println("Enter the Intrest rate:");
+		double r = kb.nextDouble();
 		System.out.println("Enter the number of times the loan will be compounded per year:");
 		double n = kb.nextDouble();
 		System.out.println("Enter the life of the loan:");
 		double t = kb.nextDouble();
-		double equation = compoundintrest.intrest(r, p, n, t); 
+		double a = (1+r/n);
+		double g = n * t;
+		double h = Math.pow(a, g);
+		double w = t * 12;
+		double q = p * h / w;
 		
-		System.out.println("Equation: " + equation);
-	}
-	
-	public double intrest(double r, double p, double n, double t)
-	
-	{
-		return (p*Math.pow(1 + r/n, n * t));
+		System.out.println("Your amount will equal " + q);
 	}
 }

@@ -5,8 +5,8 @@ public class PasswordUsername
 	public static void main(String[]args)
 	{
 		kb = new Scanner(System.in);
-		password = h;
-		username = f;
+		static String password = ht;
+		static String username = f;
 		recursion();
 	}
 	
@@ -16,9 +16,9 @@ public class PasswordUsername
 		String pass = kb.next();
 		System.out.printLine("Please type in the username");
 		String user = kb.nextLine();
-		if(pass(username) || user(password))
+		if(user(username) || pass(password))
 		{
-			if(choice.equals("Y"))
+			if(pass("h"))
 				System.out.print("Lets do some recursions!");
 			else
 				System.out.println("Spoiled the fun!");
