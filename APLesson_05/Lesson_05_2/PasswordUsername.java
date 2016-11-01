@@ -1,11 +1,16 @@
 import java.util.Scanner;
 public class PasswordUsername
 {
+	static Scanner kb;
 	public static void main(String[]args)
 	{
 		PasswordUsername form = new PasswordUsername();
-		Scanner kb = new Scanner(System.in);
-		
+		 kb = new Scanner(System.in);
+		 recursion();
+	}
+		public static void recursion()
+		{
+			
 		System.out.println("Enter the username: ");
 		String user = kb.nextLine();
 		System.out.println("Enter the password: ");
@@ -17,11 +22,13 @@ public class PasswordUsername
 		{
 			if (!user.equals(Username))
 			{
-				System.out.println("Your username is incorrect.");
+				System.out.println("Your username is incorrect. Please try again.");
+				recursion();
 			}
 			else if (!pass.equals(Password))
 			{
-				System.out.println("Your password is incorrect.");
+				System.out.println("Your password is incorrect. Please try again.");
+				recursion();
 			}
 			else
 			{
@@ -30,7 +37,9 @@ public class PasswordUsername
 		}
 		else
 		{
-			System.out.println("Please Leave. Both are incorrect!");
+			System.out.println("Please try again. Both are incorrect!");
+			recursion();
 		}
+		
 	}
 }
