@@ -7,7 +7,7 @@ public class Dice_Roll
 	
 	public static void main(String[]args)
 	{
-		 int Your = 1 + (int)((Math.random()*6));
+		int Your = 1 + (int)((Math.random()*6));
 		int Computer = 1 + (int)((Math.random()*6));
 		
 		rollDice();

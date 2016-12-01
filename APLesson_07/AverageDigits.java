@@ -21,8 +21,7 @@ public class AverageDigits
 			dig += 1;
 			av += num %10;
 			num /= 10;
-			
-			av = av/dig;
+			av /= dig;
 		}
 	}
 }
