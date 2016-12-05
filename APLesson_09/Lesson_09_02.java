@@ -12,9 +12,8 @@ public class Lesson_09_02
 		
 		for(int num : numbers)
 			System.out.println(num);
-	
-	System.out.println();
-		System.out.println("The sum of the numers above is " + sumArray(numbers));
+			System.out.println();
+			System.out.println("The sum of the numers above is " + sumArray(numbers));
 	}
 	
 	public static int sumArray(int[] n)

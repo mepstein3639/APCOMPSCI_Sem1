@@ -3,7 +3,6 @@ public class BiggestNumber
 {
 	static int [] array;
 	public static void main(String[]args)
-	
 	{
 		array = new int[10];
 		fillArray();
