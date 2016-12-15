@@ -8,7 +8,7 @@ public class AverageDigits
 	public static void main(String[]args)
 	{
 		Scanner kb = new Scanner(System.in);
-		System.out.println("Enter a double digit number: ");
+		System.out.println("Enter a number: ");
 		number = kb.nextInt();
 		avDigits();
 		System.out.println("The average of the digits in " + number + " is " + av + ".");
@@ -21,7 +21,7 @@ public class AverageDigits
 			dig += 1;
 			av += num %10;
 			num /= 10;
-			av /= dig;
 		}
+		av /= dig;
 	}
 }

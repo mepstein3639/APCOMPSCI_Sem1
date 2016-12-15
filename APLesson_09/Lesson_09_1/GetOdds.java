@@ -22,7 +22,7 @@ public class GetOdds
 	
 	public static void printArray()
 	{
-		for(int number:numbers)
+		for(int number : numbers)
 		{
 			System.out.print("\"" + number + "\", ");
 		}
