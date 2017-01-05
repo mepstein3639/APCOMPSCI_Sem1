@@ -1,5 +1,5 @@
 import java.util.Random;
-public class Strings
+public class XandOs
 {
 	public static void main(String[]args)
 	{
@@ -8,22 +8,21 @@ public class Strings
 		
 		for(int i = 0; i < xAndO.length; i++)
 		{
-			for(int j = 0; j < xAndO[i].length; j++)
+			for(int m = 0; m < xAndO[i].length; m++)
 			{
-				int r =rand.nextInt(2) + 1;
+				int r = rand.nextInt(2) + 1;
 				
 				if(r == 1)
 				{ 
-					xAndO[i][j] = "x";
+				xAndO[i][m] = "x";
 				}
 				else
 				{
-					xAndO[i][j] = "o";
+					xAndO[i][m] = "o";
 				}
-				System.out.print(xAndO[i][j] + "\t");
+				System.out.print(xAndO[i][m] + "\t");
 			}
 			System.out.println();
 		}
-		
 	}
 }
