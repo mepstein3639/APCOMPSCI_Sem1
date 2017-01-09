@@ -1,29 +1,25 @@
-import java.util.Random;
-public class XandO's
+import java.util.Scanner;
+public class Strings
 {
 	public static void main(String[]args)
 	{
-		Random rand = new Random();
-		String[][]xAndO = new String [4][4];
-		
-		for(int i = 0; i < xAndO.length; i++)
+		Scanner kb = new Scanner(System.in);
+		int[][]num = new int [4][4];
+		for(int i = 0; i < num.length; i++)
 		{
-			for(int j = 0; j < xAndO[i].length; j++)
+			for(int m = 0; m < num[i].length; m++)
 			{
-				int r =rand.nextInt(2) + 1;
-				
-				if(r == 1)
-				{ 
-					xAndO[i][j] = "x";
-				}
-				else
-				{
-					xAndO[i][j] = "o";
-				}
-				System.out.print(xAndO[i][j] + "\t");
+				System.out.println("Please enter number #" + ((m + 1) + ((i) * 4))); 
+				num[i][m] = kb.nextInt();
+			}
+		}
+		for(int i = 0; i < num.length; i++)
+		{
+			for(int m = 0; m < num[i].length; m++)
+			{
+				System.out.print(num[i][m] + "\t");
 			}
 			System.out.println();
 		}
-		
 	}
 }

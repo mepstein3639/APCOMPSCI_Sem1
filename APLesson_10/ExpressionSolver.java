@@ -7,8 +7,8 @@ public class ExpressionSolver
 	{
 		Scanner kb = new Scanner(System.in);
 		System.out.println("Please enter an expression containing addition, subtraction, multiplication, or division.");
-		String words = kb.nextLine();
-		ArrayList<String> equation = new ArrayList<>(Arrays.asList(words.split(" ")));
+		String expression= kb.nextLine();
+		ArrayList<String> equation = new ArrayList<>(Arrays.asList(expression.split(" ")));
 
 		System.out.println(doEquation(equation));
 	}
