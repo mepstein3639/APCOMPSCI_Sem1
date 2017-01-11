@@ -9,23 +9,25 @@ public class Dice_Roll
 	{
 		int Your = 1 + (int)((Math.random()*6));
 		int Computer = 1 + (int)((Math.random()*6));
-		
-		rollDice();
-		
+		rollDice(Your, Computer);
 		System.out.println("Player rolled a " + Your);
 		System.out.println("The computer rolled a " + Computer);
 		System.out.println(winner + "is the winner!");
 	}
 	
-	public static void rollDice()
+	public static void rollDice(int Your, int Computer)
 	{
 		if(Your > Computer)
-		winner = "Player ";
-	
+		{
+			winner = "Player ";
+		}
 		if(Your < Computer)
+		{
 		winner = "Computer ";
-	
-		if(Your == Computer)
-		winner = "No one ";
+		}
+		else
+		{
+			winner = "No one ";
+		}
 	}
 }

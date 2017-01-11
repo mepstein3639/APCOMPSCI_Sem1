@@ -29,7 +29,6 @@ public class GameGun
 			}
 			System.out.println(printMag());
 		}
-		
 		System.out.println("Out of bullets!");
 	}
 	static void resetMag()
