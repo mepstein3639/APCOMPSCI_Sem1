@@ -13,6 +13,7 @@ public class GameGun
 		shotCount = 0;
 		Mag = new String[MagSize];
 		resetMag();
+		
 		String action;
 		
 		while(bulletCount > 0 || shotCount > 0)
