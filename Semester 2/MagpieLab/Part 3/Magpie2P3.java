@@ -1,4 +1,4 @@
-public class Magpie2P2
+public class Magpie2P3
 {
 	public String getGreeting()
 	{
@@ -38,19 +38,25 @@ public class Magpie2P2
 		{
 			response = "Say something, please";
 		}
-		
+	
 		else if (findKeyword(statement, "I want to", 0) >= 0)
 		{
 			response = transformIWantToStatement(statement);
 		}
+		
 		else
 		{
-		
 			int psn = findKeyword(statement, "you", 0);
 			if (psn >= 0
 				&& findKeyword(statement, "me", psn) >= 0)
 			{
 				response = transformYouMeStatement(statement);
+			}
+			
+			else if (0 <= findKeyword(statement, "i")
+				&& findKeyword(statement, "i") < psn)
+			{
+				response = transformIYouStatement(statement);
 			}
 			else
 			{
@@ -87,6 +93,21 @@ public class Magpie2P2
 		
 		String restOfStatement = phrase.substring(psnOfYou + 3, psnOfMe).trim();
 		return "What makes you think that I " + restOfStatement + " you?";
+	}
+	
+	private String transformIYouStatement(String statement)
+	{
+		String phrase = statement.toLowerCase().trim();
+		String lastChar = phrase.substring(phrase.length() - 1);
+		
+		if(lastChar.equals("."))
+			phrase = phrase.substring(0 ,phrase.length( )- 1);
+		
+		int psnOfI = findKeyword(phrase, "i");
+		int psnOfYou = findKeyword(phrase, "you", psnOfI + 1);
+		
+		String restOfStatement = phrase.substring(psnOfI + 1, psnOfYou).trim();
+		return "Why do you " + restOfStatement + " me?";
 	}
 	
 	private int findKeyword(String statement, String goal, int startPos)
