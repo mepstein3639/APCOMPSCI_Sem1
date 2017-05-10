@@ -44,6 +44,15 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testFixUnderwater()
+  {
+    Picture fishes = new Picture("water.jpg");
+    fishes.explore();
+    fishes.fixUnderwater();
+    System.out.println("Fixed underwater");
+    fishes.explore();
+  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -78,6 +87,14 @@ public class PictureTester
     blueMotorcycle.explore();
     blueMotorcycle.mirrorHorizontalBotToTop();
     blueMotorcycle.explore();
+  }
+  /** Method to test mirrorDiagonal */
+   public static void testMirrorDiagonal()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorDiagonal();
+    caterpillar.explore();
   }
   
   /** Method to test mirrorTemple */
@@ -126,10 +143,14 @@ public class PictureTester
   /** Method to test the copy method */
   public static void testCopy()
   {
-    Picture bonfire = new Picture("bonfire.jpg");
+    Picture grass = new Picture("grass.jpg");
 	Picture temple = new Picture("temple.jpg");
-    temple.copy(bonfire, 252, 48, 100, 47, 221, 165);
-    temple.explore();
+	Picture femaleLionandHall = new Picture("femaleLionandHall.jpg");
+    grass.copy(temple, 200, 0, 100, 0, 400, 200);
+	grass.copy(femaleLionandHall, 0, 0, 100, 0, 300, 200);
+	grass.copy(temple, 200, 450, 100, 0, 400, 200);
+	grass.copy(femaleLionandHall, 0, 450, 100, 0, 300, 200);
+    grass.explore();
   }
   
   /** Method to test edgeDetection */
@@ -167,7 +188,7 @@ public class PictureTester
     //testCollage();
 	//testMyCollage();
     //testCopy();
-    testEdgeDetection();
+    //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
