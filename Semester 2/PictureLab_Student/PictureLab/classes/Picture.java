@@ -495,16 +495,16 @@ public class Picture extends SimplePicture
             }
          }
      }
-  
+  }
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
   public static void main(String[] args) 
   {
-    Picture grass = new Picture("grass.jpg");
-    grass.explore();
-    grass.zeroBlue();
-    grass.explore();
+    Picture beach = new Picture("grass.jpg");
+    beach.explore();
+    beach.zeroBlue();
+    beach.explore();
   }
   
 } // this } is the end of class Picture, put all new methods before this

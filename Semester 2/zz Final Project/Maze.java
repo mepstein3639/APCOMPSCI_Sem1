@@ -2,57 +2,75 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Stack;
 
-public class Maze{
+public class Maze
+{
 	int sizeX;
 	int sizeY;
 	Cell[][] cells;
 	
-	public Maze(){
-		sizeX = 25;
-		sizeY = 25;
+	public Maze()
+	{
+		Random rand = new Random();
+		sizeX = rand.nextInt(30) + 15;
+		sizeY = rand.nextInt(30) + 15;
 		cells = new Cell[sizeX][sizeY];
 		initializeCells();
 		generateMaze();
 	}
 	
-	public Maze(int x, int y){
+	public Maze(int x, int y)
+	{
 		sizeX = x;
 		sizeY = y;
 		cells = new Cell[sizeX][sizeY];
 		initializeCells();
 		generateMaze();
 	}
-	public void printAllCells(){
-		for(int i = 0; i < sizeX; i++){
-			for(int j = 0; j < sizeY; j++){
+	
+	public void printAllCells()
+	{
+		for(int i = 0; i < sizeX; i++)
+		{
+			for(int j = 0; j < sizeY; j++)
+			{
 				System.out.println(i + " " + j);
 				cells[i][j].printCell();
 				System.out.println("\n");
 			}
 		}
 	}
-	private void initializeCells(){
-		for(int i = 0; i < sizeX; i++){
-			for(int j = 0; j < sizeY; j++){
+	
+	private void initializeCells()
+	{
+		for(int i = 0; i < sizeX; i++)
+		{
+			for(int j = 0; j < sizeY; j++)
+			{
 				cells[i][j] = new Cell();
 				cells[i][j].x = i;
 				cells[i][j].y = j;
-				if (i == 0){
+				if (i == 0)
+				{
 					cells[i][j].borders[0] = 1;
 				}
-				if (j == 0){
+				if (j == 0)
+				{
 					cells[i][j].borders[3] = 1;
 				}
-				if (i == sizeX - 1){
+				if (i == sizeX - 1)
+				{
 					cells[i][j].borders[2] = 1;
 				}
-				if (j == sizeY - 1){
+				if (j == sizeY - 1)
+				{
 					cells[i][j].borders[1] = 1;
 				}
 			}
 		}
 	}
-	private void generateMaze(){
+	
+	public void generateMaze()
+	{
 		Random rand = new Random();
 		
 		int x = rand.nextInt(sizeX);
@@ -67,11 +85,13 @@ public class Maze{
 		
 		Vertex tmpV = new Vertex();
 		
-		while(vistedCells < totalCells){
+		while(vistedCells < totalCells)
+		{
 			neighborCellList.clear();
 			
 			tmpV = new Vertex();
-			if(y-1 >= 0 && cells[x][y-1].checkWalls() == true){
+			if(y-1 >= 0 && cells[x][y-1].checkWalls() == true)
+			{
 				tmpV.x1 = x;
 				tmpV.y1 = y;
 				tmpV.x2 = x;
@@ -81,8 +101,10 @@ public class Maze{
 				neighborCellList.add(tmpV);
 				
 			}
+			
 			tmpV = new Vertex();
-			if(y+1 < sizeY && cells[x][y+1].checkWalls() == true){
+			if(y+1 < sizeY && cells[x][y+1].checkWalls() == true)
+			{
 				tmpV.x1 = x;
 				tmpV.y1 = y;
 				tmpV.x2 = x;
@@ -92,8 +114,10 @@ public class Maze{
 				neighborCellList.add(tmpV);
 				
 			}
+			
 			tmpV = new Vertex();
-			if(x-1 >= 0 && cells[x-1][y].checkWalls() == true){
+			if(x-1 >= 0 && cells[x-1][y].checkWalls() == true)
+			{
 				tmpV.x1 = x;
 				tmpV.y1 = y;
 				tmpV.x2 = x-1;
@@ -103,8 +127,10 @@ public class Maze{
 				neighborCellList.add(tmpV);
 				
 			}
+			
 			tmpV = new Vertex();
-			if(x+1 < sizeX && cells[x+1][y].checkWalls() == true){
+			if(x+1 < sizeX && cells[x+1][y].checkWalls() == true)
+			{
 				tmpV.x1 = x;
 				tmpV.y1 = y;
 				tmpV.x2 = x+1;
@@ -114,7 +140,9 @@ public class Maze{
 				neighborCellList.add(tmpV);
 				
 			}
-			if(neighborCellList.size() >= 1){
+			
+			if(neighborCellList.size() >= 1)
+			{
 				int r1 = rand.nextInt(neighborCellList.size());
 				tmpV = neighborCellList.get(r1);
 				
@@ -124,19 +152,22 @@ public class Maze{
 				cellStack.push(currentCell);
 				
 				currentCell = cells[tmpV.x2][tmpV.y2];
-				
+				 
 				x = currentCell.x;
 				y = currentCell.y;
 				
 				vistedCells++;
 				
-			} else{
+			} 
+			
+			else
+			{
 				currentCell = cellStack.pop();
 				x = currentCell.x;
 				y = currentCell.y;
 			}
 		}
-		
 		cells[0][0].walls[3] = 0;
+		cells[sizeX - 1][sizeY - 1].walls[1] = 0;
 	}
 }
